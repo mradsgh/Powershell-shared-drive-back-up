@@ -1,4 +1,4 @@
-﻿#######################################################################################################################
+#######################################################################################################################
 #  Back up script, to take incremental backups since last full back up previous week via task scheduler               #
 #  *To be used with the full backup script                                                                            #
 #                                                                                                                     #
@@ -14,7 +14,7 @@ $currentMonth = Get-Date -UFormat %m;$CurrentMonth = (Get-Culture).DateTimeForma
 $CurrentYear = (Get-Date).ToString('yyyy')
 $CurrentWeek = Get-Date -UFormat %V
 $CurrentDateTime = (Get-Date).ToString('yyyy_MM_dd HH_mm')
-$SRCLocation = "S:\" # Line 45 change drive letter to match SRClocation drive letter
+$SRCLocation = "S:\" # Change lines 48/72 drive letter to match SRClocation drive letter
 $DSTLocation = "F:\$CurrentWeek - $CurrentMonth $CurrentDateTime"
 $LastFullBackUp = Get-ChildItem "F:\" | Where-Object {$_.CreationTime -gt (Get-Date).AddDays(-7) -and $_.Name -like "*Full Back Up"} | select -Expand Fullname # Change "AddDays(-2)" to "AddDays(-7)" to retrieve last week full backup
 
