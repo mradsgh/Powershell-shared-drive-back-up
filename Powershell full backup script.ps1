@@ -1,5 +1,5 @@
-﻿#######################################################################################################################
-#  Powershell Back up script, to take full backup of a shared drive, to be run via task scheduler                    #
+#######################################################################################################################
+#  Powershell Back up script, to take full backup of a shared drive, to be run via task scheduler                     #
 #                                                                                                                     #
 #                                                                                                                     #
 #                                                                                                                     #
