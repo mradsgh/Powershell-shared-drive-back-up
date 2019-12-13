@@ -22,8 +22,7 @@ $DSTLocation = "S:\$currentMonth $CurrentYear - Full Back Up"
 # Create back up Directory folder #
 ###################################
 $FolderExists = Test-Path $DSTLocation
-If ($FolderExists -eq $False) 
-{
+If ($FolderExists -eq $False) {
   New-Item -ItemType directory -Path $DSTLocation -Force
 }
 
